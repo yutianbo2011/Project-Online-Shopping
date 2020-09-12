@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import url from '../utils/URL';
-import {featuredProducts} from '../utils/helpers';
+import {featuredProducts, flattenProducts} from '../utils/helpers';
 
 export const ProductContext = React.createContext();  //provider, consumer
 
@@ -14,9 +14,10 @@ export default function ProductProvider ( props) {
         setLoading(true);
         axios.get(`${url}/products`).then(
             response => {
-                const newFeatured=featuredProducts(response.data);
+                const newFeatured=featuredProducts(flattenProducts(response.data));
+                const newProduct= flattenProducts(response.data);
                 setFeatured(newFeatured);
-                setProduct(response.data);
+                setProduct(newProduct);
                 setLoading(false);
                 
             }
