@@ -14,7 +14,7 @@ export default function ProductProvider ( props) {
         setLoading(true);
         axios.get(`${url}/products`).then(
             response => {
-                console.log(response);
+                // console.log(response);
                 const newFeatured=featuredProducts(flattenProducts(response.data));
                 const newProduct= flattenProducts(response.data);
                 setFeatured(newFeatured);

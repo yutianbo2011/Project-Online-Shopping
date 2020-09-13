@@ -14,10 +14,9 @@ export const featuredProducts = (data) => {
 export const flattenProducts = (data) =>{
     return data.map(item => {
         //claudinary
-        console.log(item.image);
         // let image = url+ item.image[0].url; //local set no deployment. 
         let image= item.image[0].url;  // cloudinary set. The url is https://res/cloudinary.com/xx . 
-        console.log(image);
+        // console.log(image);
         return {...item, image: image};
     })
 };

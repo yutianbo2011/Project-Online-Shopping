@@ -10,7 +10,6 @@ export default function ProductDetails() {
   const history = useHistory();
   const {product,}= React.useContext(ProductContext);
   const {addToCart} = React.useContext(CartContext);
-  console.log(product);
   const curProduct = product.find(item => item.id === parseInt(id) );
   if(typeof curProduct==='undefined' || curProduct===null || Object.keys(curProduct).length ===0){
     return <Loading />
@@ -18,7 +17,7 @@ export default function ProductDetails() {
   else{
     const {image, title, price, description}= curProduct;
     return <section className='single-product' >
-      <img src={image.url} alt={title} className='single-product-image'/>
+      <img src={image} alt={title} className='single-product-image'/>
       <article>
         <h1>{title}</h1>
         <h2> ${price}</h2>

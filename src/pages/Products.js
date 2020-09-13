@@ -5,7 +5,7 @@ import ProductList from '../components/Products/ProductList';
 
 export default function Products() {
   const {product, loading, }= React.useContext(ProductContext);
-  console.log(product);
+  // console.log(product);
   if(loading){
     return <Loading />;
   }

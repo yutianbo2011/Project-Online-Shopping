@@ -56,7 +56,8 @@ export default function CarProvider(props){
             increaseAmount(product.id);
         }
         else{
-            const newItem= {id: product.id, price: product.price, title: product.title, image: product.image.url, amount: 1};
+            // console.log(product.image);
+            const newItem= {id: product.id, price: product.price, title: product.title, image: product.image, amount: 1};
             const newCart = [...cart, newItem];
             setCart(newCart);
         }

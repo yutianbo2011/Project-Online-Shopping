@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 export default function Product(props) {
-  console.log(props.image);
+  // console.log(props.image);
   return <article className='product'>
     <div className='img-container'>
       <img src={props.image} alt={props.title} />
