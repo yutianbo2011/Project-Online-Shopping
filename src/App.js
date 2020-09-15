@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import ProductDetails from './pages/ProductDetails';
 import Products from './pages/Products';
-
+import Alert from './components/Alert';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //components
@@ -18,6 +18,7 @@ export default function App() {
   return (
     <Router>
       <Header />
+      <Alert />
       <Switch>
       <Route exact path='/'>
         <Home />
