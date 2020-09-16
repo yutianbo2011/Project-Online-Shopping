@@ -32,7 +32,7 @@ const UserProvider = (props) => {
         setAlert({...alert, show:false});
     }
 
-    return <UserContext.Provider value={{user, userLogin, userLogout, alert, showAlert, hideAlert }}>
+    return <UserContext.Provider value={{user, userLogin, userLogout, getUserFromLocalStorage, alert, showAlert, hideAlert }}>
         {props.children}
     </UserContext.Provider>
 }

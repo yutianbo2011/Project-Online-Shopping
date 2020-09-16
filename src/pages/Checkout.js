@@ -8,7 +8,7 @@ import {CardElement, StripeProvider, Elements, injectStripe} from 'react-stripe-
 
 function Checkout(props) {
   const {cart, total, clearCart} = React.useContext(CartContext);
-  const {user, alert, showAlert, hideAlert } = React.useContext(UserContext);
+  const {user, showAlert, hideAlert } = React.useContext(UserContext);
   const history= useHistory();
   //state values
   const [name, setName] = React.useState('');

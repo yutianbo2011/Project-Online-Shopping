@@ -3,7 +3,7 @@ import {CartContext} from '../context/cart';
 import {useContext, UserContext} from '../context/user';
 import EmptyCart from '../components/Cart/EmptyCart';
 import CartItem from '../components/Cart/CartItem';
-import CartLink from '../components/Cart/CartLink';
+// import CartLink from '../components/Cart/CartLink';
 import {Link} from 'react-router-dom';
 // import {UserContext} from '../context/user';
 

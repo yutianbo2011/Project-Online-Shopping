@@ -1,4 +1,4 @@
-import url from './URL';
+// import url from './URL';
 
 // helper functions
 export const featuredProducts = (data) => {

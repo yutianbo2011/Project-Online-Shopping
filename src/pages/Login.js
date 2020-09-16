@@ -42,12 +42,7 @@ export default function Login() {
       
     }
     else{
-      let registerResponse= await registerUser({email, password, username});
-      showAlert({
-        msg: `Hi ${username}! You are registered!`
-      })
       response=await loginUser({email, password});
-      hideAlert();
     }
     if(response){
       console.log('success', response.data);
