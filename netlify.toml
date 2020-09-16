@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
-  publish="C:\React_project\Project-Online-Shopping-master/build"
-  base = "C:\React_project\Project-Online-Shopping-master/"
+  publish="/build"
+  base = "/"
 
 [[redirects]]
   from = "/*"
