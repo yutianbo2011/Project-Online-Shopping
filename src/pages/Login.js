@@ -3,7 +3,7 @@ import React from "react";
 
 //strapi functions
  import loginUser from '../strapi/loginUser';
- import registerUser from '../strapi/registerUser';
+//  import registerUser from '../strapi/registerUser';
 //handle user
 import {useHistory} from 'react-router-dom';
 import {UserContext} from '../context/user';
@@ -54,6 +54,7 @@ export default function Login() {
         msg: `Hi ${username}! You are logged in!`
       })
       history.push('/products');
+      hideAlert();
     }
     if(!response){
       //show alert
