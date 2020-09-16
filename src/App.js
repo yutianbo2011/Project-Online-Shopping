@@ -1,4 +1,5 @@
 import React from "react";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 //pages
 import About from './pages/About';
 import Cart from './pages/Cart';
@@ -9,10 +10,10 @@ import Login from './pages/Login';
 import ProductDetails from './pages/ProductDetails';
 import Products from './pages/Products';
 import Alert from './components/Alert';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
 //components
 import Header from './components/Header';
+import PrivateRoute from './components/PrivateRoute';
+
 
 export default function App() {
   return (
@@ -29,9 +30,9 @@ export default function App() {
       <Route path='/cart'>
         <Cart />
       </Route>
-      <Route path='/checkout'>
+      <PrivateRoute path='/checkout' name='john' msg='hello'>
         <Checkout />
-      </Route>
+      </PrivateRoute>
       <Route path='/login'>
         <Login />
       </Route>

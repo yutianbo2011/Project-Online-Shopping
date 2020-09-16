@@ -44,14 +44,15 @@ export default function Login() {
       response= await registerUser({email, password, username});
     }
     if(response){
-      console.log('success', response.data);
-      const {jwt: token, username:username } = response.data;
+      console.log('success', response.data.user);
+      const token= response.data.jwt;
+      const username=response.data.user.username;
       const newUser = {token, username};
       userLogin(newUser);
       showAlert({
         msg: `Hi ${username}! You are logged in!`
       })
-      history.push('/products')
+      history.push('/products');
     }
     else{
       //show alert
