@@ -6,7 +6,7 @@ export default async function registerUser ({email, password, username}) {
     const data= {username: username, email: email, password: password};
     // console.log(data);
     const response = await axios
-        .post( 'http://localhost:1337/users',  data)
+        .post( `${url}/users`,  data)
         .catch( error => console.log(error));
     console.log(response);
     return response;

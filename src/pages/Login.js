@@ -12,7 +12,7 @@ import {UserContext} from '../context/user';
 export default function Login() {
   const history = useHistory(); 
   //setup user context
-  const {userLogin, alert, showAlert} = React.useContext(UserContext);
+  const {userLogin, alert, showAlert, hideAlert} = React.useContext(UserContext);
 
   //state values
   const [email, setEmail] = React.useState('');
@@ -39,12 +39,18 @@ export default function Login() {
     let response;
     if(isMember){
       response=await loginUser({email, password});
+      
     }
     else{
-      response= await registerUser({email, password, username});
+      let registerResponse= await registerUser({email, password, username});
+      showAlert({
+        msg: `Hi ${username}! You are registered!`
+      })
+      response=await loginUser({email, password});
+      hideAlert();
     }
     if(response){
-      console.log('success', response.data.user);
+      console.log('success', response.data);
       const token= response.data.jwt;
       const username=response.data.user.username;
       const newUser = {token, username};
@@ -54,7 +60,7 @@ export default function Login() {
       })
       history.push('/products');
     }
-    else{
+    if(!response){
       //show alert
       showAlert({
         msg: 'There was an error. Please try again...',
