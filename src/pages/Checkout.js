@@ -13,7 +13,7 @@ function Checkout(props) {
   //state values
   const [name, setName] = React.useState('');
   const [error, setError] = React.useState('');
-  const isEmpty = !name || alert.show;
+  // const isEmpty = !name || alert.show;
 
   const  handleSubmit = async (event) =>{
     showAlert({msg: 'submitting order... please wait'});
