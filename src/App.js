@@ -13,7 +13,7 @@ import Alert from './components/Alert';
 //components
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
-
+import ScrollButton from './components/ScrollButton';
 
 export default function App() {
   return (
@@ -47,7 +47,7 @@ export default function App() {
         <Error />
       </Route>
     </Switch>
-    
+    <ScrollButton />
   </Router>
   );
 }

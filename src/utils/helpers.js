@@ -9,14 +9,11 @@ export const featuredProducts = (data) => {
     )
 };
 
-
 //solve the image problem locally
 export const flattenProducts = (data) =>{
     return data.map(item => {
-        //claudinary
         // let image = url+ item.image[0].url; //local set no deployment. 
-        let image= item.image[0].url;  // cloudinary set. The url is https://res/cloudinary.com/xx . 
-        // console.log(image);
+        let image=(item.image[0])? item.image[0].url: null;  // cloudinary set. The url is https://res/cloudinary.com/xx . 
         return {...item, image: image};
     })
 };
