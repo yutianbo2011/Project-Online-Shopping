@@ -665,7 +665,7 @@ Pagination Buttons
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 0 auto;
-  margin-top: -4.5rem;
+  /* margin-top: -4.5rem; */
   padding-bottom: 2rem;
 }
 
@@ -719,7 +719,7 @@ Filters Section
   margin: 0 auto;
   max-width: 25rem;
   padding-top: 4rem;
-  margin-bottom: -4rem;
+  /* margin-bottom: -4rem; */
 }
 .filters-form {
   display: grid;
